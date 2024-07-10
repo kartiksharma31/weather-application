@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>weather app</title>
+        <style>
+            body{
+                background-image:url("pexels-lee.jpg")
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <header class="container">
+
+        <h1 style="color:black;">WELCOME TO WEATHER REPORT <h1><br>
+        </header>
+
+                <form action="/city/" method="post">
+                    <br><br>
+                    <p class="fw-bold"><b>PLEASE ENTER CITY TO GET YOUR MOST ACCURATE WEATHER FORECAST<b>
+                    <br>
+                    <input type="text" class="css-input" placeholder="Enter City Name...." name="enter_city" id="enter_city" >
+                    <input type="submit" id="search-btn" class="btn btn-success py-2 w-100 mt-3 mb-2" onclick="this.blur()"></p>
+                </form>
+                <br>
+        <div class="widget-container">
+            <div>
+                <div class="top-left">
+                    <h1 class = "city-out" id="curLocationDisplay">{{city}}</h1>
+                </div>
+
+            <div class="top-right">
+                <h1 id="weather-status">{{weather}}</h1>
+                <img class="weather-icon" src="" alt="sunny">
+            </div>
+        </div>
+
+        <div class="horizontal-half-divider"></div>
+        <div>
+            <div class="bottom-left">
+                <h6 id="temperature">{{temp}}</h6>
+            </div>
+
+        <div class="vertical-half-divider"></div>
+        <div class="bottom-right">
+            <div class="other-details-key">
+                <h5> Latitude</h5>
+                <h5>Longitude</h5>
+                <h5>country</h5>
+                <h5>visibility</h5>
+            </div>
+            <div class="other-details-values">
+                <p class="Latitude">{{lat}}</p>
+                <p class = "Longitude">{{lon}}</p>
+                <p class="country">{{country}}</p>
+                <p class="visibility">{{visibility}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+   </body>
+</html>
